@@ -29,4 +29,11 @@ function insertUser(username, email, password, firstname, lastname) {
         console.log(res);
     });
 }
-insertUser("anu Ruidas", "anu@gmail.com", "123456", "anu", "ruidas");
+// insertUser("anu Ruidas" , "anu@gmail.com" , "123456" , "anu" , "ruidas") 
+function getUser() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield prisma.user.findMany();
+        console.log(res);
+    });
+}
+getUser();

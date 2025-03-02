@@ -17,4 +17,9 @@ async function insertUser(username : string , email : string , password : string
     })
     console.log(res)
 }
-insertUser("anu Ruidas" , "anu@gmail.com" , "123456" , "anu" , "ruidas") 
+// insertUser("anu Ruidas" , "anu@gmail.com" , "123456" , "anu" , "ruidas") 
+async function getUser(){
+    const res = await prisma.user.findMany()
+    console.log(res)
+}
+getUser()
